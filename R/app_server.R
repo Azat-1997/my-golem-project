@@ -14,9 +14,8 @@ app_server <- function(input, output, session) {
   )
   
   # Инициализируем проверку
-  auth <- callModule(
-    module = auth_server,
+  auth <- shinymanager::auth_server(
     id = "auth",
-    check_credentials = check_credentials(credentials)
+    check_credentials = shinymanager::check_credentials(credentials)
   )
 }
