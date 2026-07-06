@@ -12,10 +12,8 @@ app_server <- function(input, output, session) {
     password = c("admin123", "secret2026"),
     stringsAsFactors = FALSE
   )
-  
   # Инициализируем проверку
-  auth <- shinymanager::auth_server(
-    id = "auth",
+  auth <- shinymanager::secure_server(
     check_credentials = shinymanager::check_credentials(credentials)
   )
 }

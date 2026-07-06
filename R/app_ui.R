@@ -5,7 +5,7 @@
 #' @import shiny
 #' @noRd
 app_ui <- function(request) {
-	secure_ui(tagList(
+	secure_app(tagList(
 		# Leave this function for adding external resources
 		golem_add_external_resources(),
 		# Your application UI logic
